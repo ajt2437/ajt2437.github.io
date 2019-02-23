@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
+    <!-- <script src="main.js"></script> -->
+    <style>
+        img {
+            width: 100%
+        }
+    </style>
+</head>
+
+<body style="background-image:url('Thunderstorm.jpg');">
+    <img src="emerald.jpg" alt="big rock emerald" style="width:50%;height:50%">
+    <img src="emerald.jpg" alt="big rock emerald" width="300px" height="300px">
+    <p>Suggested to use style attribute instead of width and height attributes. It prevents styles sheets from changing the size of images.</p>
+
+    <a href="https://www.instagram.com/corgis_of_instagram/">
+        <img src="summerDog.gif" alt="Dog drinking water from hose" style="width:100%;height:100%;border:0;">
+    </a>
+    <p>Add border 0 so IE9 (and earlier) from displaying a border around the image.</p>
+
+    <p><img src="Eisley.jpg" alt="Australian sheppard" title="Eisley" style="float:left;width:50%;height:50%;">To the left we have one Australian sheppard named Eisley</p>
+
+    <p><img src="Austin-Juniour.jpg" alt="Weiner dogs" title="Left:Austin Right:Juniour" style="float:right;width:50%;height:50%;">To the right we have two Dachshund named Austin and Juniour</p>
+
+    <p>You can make clickable areas in a picture with the &lt;map&gt;"</p>
+    <ol>
+        <li>Create &lt;map&gt; with nested &lt;area&gt; with a <i>name</i> attribute, defining the <i>coords</i> and <i>href</i></li>
+        <li>Assign the &lt;map&gt; to the &lt;img&gt; attribute <i>usemap</i> with the following syntax: #(map name)</li>
+    </ol>
+
+    <p>If you add a background-image that is smaller than the element where it is specified, it will repeat itself</p>
+
+    <picture>
+        <source media="(min-width:650px)" srcset="Supercell.jpg">
+        <source media="(min-width:465px)" srcset="Tornado.jpg">
+        <img src="SnowInAustin.jpg" alt="Snow in Austin" style="width:auto;">
+    </picture>
+</body>
+
+</html>
