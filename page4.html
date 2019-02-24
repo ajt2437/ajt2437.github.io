@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
+    <!-- <script src="main.js"></script> -->
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            /* border-collapse: collapse; */
+        }
+        
+        th,
+        td {
+            padding: 15px;
+        }
+        
+        th {
+            text-align: left;
+        }
+        
+        table {
+            border-spacing: 5px;
+        }
+        
+        table#t01 tr:nth-child(even) {
+            background-color: red;
+        }
+        
+        table#t01 tr:nth-child(odd) {
+            background-color: blue;
+        }
+        
+        table#t01 th {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="t01">
+        <caption>Friends and GF</caption>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Birthday(mm/dd)</th>
+        </tr>
+        <tr>
+            <td>Brittany</td>
+            <td>Huerta</td>
+            <td>05/24</td>
+        </tr>
+        <tr>
+            <td>William</td>
+            <td>McCormack</td>
+            <td>02/18</td>
+        </tr>
+    </table>
+
+    <p>Remember to define borders for both the table and the table cells.</p>
+    <p>By default, table headings are bold and centered.</p>
+    <p>If the table has collapsed borders, <em>border-spacing</em> has no effect.</p>
+    <table style="width:100%">
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Telephone</th>
+        </tr>
+        <tr>
+            <td>Bill Gates</td>
+            <td>55577854</td>
+            <td>55577855</td>
+        </tr>
+    </table>
+
+    <table style="width:100%">
+        <tr>
+            <th>Name:</th>
+            <td>Bill Gates</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone:</th>
+            <td>55577854</td>
+        </tr>
+        <tr>
+            <td>55577855</td>
+        </tr>
+    </table>
+
+    <p>The <em>&lt;caption&gt;</em> tag must be inserted immediately after the <em>&lt;table&gt;</em> tag</p>
+
+    <h1>Things I like about Sunday</h1>
+    <ul style="list-style-type: square;">
+        <li>Chillville FM 101.5</li>
+        <li>BodyCombat at Gold Gym</li>
+        <li>Hanging out in Nature</li>
+    </ul>
+
+    <h2>Top 3 Best places to eat</h2>
+    <ol type="I">
+        <li>Big Kahuna</li>
+        <li>Pueblo Viejo</li>
+        <li>Tan Mi</li>
+    </ol>
+
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+
+    <ol start="50">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <a href="#t01">Scroll To Top</a> <br>
+    <a href="page5.html">Page 5</a>
+</body>
+
+</html>

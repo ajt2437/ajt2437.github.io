@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
+    <!-- <script src="main.js"></script> -->
+</head>
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+    
+    li a:hover {
+        background-color: #111111;
+    }
+    
+    .cities {
+        background-color: black;
+        color: white;
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .note {
+        font-size: 120%;
+        color: red;
+    }
+</style>
+
+<body>
+    <h1>Page 5</h1>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#search">Search New Locations</a></li>
+        <li><a href="#favourite">Favourite locations</a></li>
+    </ul>
+
+    <h1>HTML Grouping Tags</h1>
+    <p>Block-level element always start on a new line and take up the full width available</p>
+    <p>The &lt;div&gt; element is a block-level element.</p>
+
+    <div>Hello</div>
+    <div>World</div>
+
+    <p>Inline elements do not start on a new line and only takes up as much width as necessary</p>
+    <p>The &lt;span&gt; element is an inline element.</p>
+
+    <span>Hello</span>
+    <span>World</span>
+
+    <br><br>
+    <a href="https://www.w3schools.com/html/html_blocks.asp/">For more example of block-level and inline elements</a>
+
+    <p>The &lt;div&gt; is used as a containter for other HTML elements. It has not required attributes, but <em>style</em>, <em>class</em> and <em>id</em> are common</p>
+
+    <div style="background-color:black;color:white;padding:20px;">
+        <h2>London</h2>
+        <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.
+        </p>
+    </div>
+
+    <p>The same applies to the &lt;span&gt; element</p>
+
+    <h1>My <span style="color:red;">Important</span> Heading</h1>
+
+    <h1>HTML The class attribute</h1>
+    <p>Used to define equal styls for elements with the same class name</p>
+
+    <div class="cities">
+        <h2>London</h2>
+        <p>London is the capital of England.</p>
+    </div>
+
+    <div class="cities">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div class="cities">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <p><span class="note">Important note:</span> The class name is case sensitive</p>
+</body>
+
+</html>
