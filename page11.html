@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page 11</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" type="text/css">
+    <!-- <script src="main.js"></script> -->
+    <style>
+        div.greenBorder {
+            border: 3px solid #4CAF50;
+            padding: 5px;
+        }
+        
+        .imgRight {
+            float: right;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .box {
+            float: left;
+            width: 33.33%;
+            padding: 50px;
+        }
+        
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        p {
+            font-family: 'Maven Pro', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Layout - float and clear</h1>
+
+    <p>The CSS <span class="method">float</span> property specifies how an element should float.</p>
+
+    <p>The CCS <span class="method">clear</span> property specifies what elements can float beside the cleared element and on which side</p>
+
+    <h2>The clear Property</h2>
+
+    <p>The <span class="method">clear</span> property can have one of the following values:</p>
+
+    <ul>
+        <li>none - Allows floating elements on both sides. This is default</li>
+        <li>left - No floating elements allowed on the left side</li>
+        <li>right - No floating elements allowed on the right side</li>
+        <li>both - No floating elements allowed on either the left or the right side</li>
+        <li>inherit - The element inherits the clear value of it parent</li>
+    </ul>
+
+    <p>The most common way to use the <span class="method">clear</span> property is after you have used a <span class="method">float</span> property on an element. </p>
+
+    <p>When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left. Your floated element will continue to float, but the cleared element will appear below it on the web page.</p>
+
+    <h2>The clearfix Hack</h2>
+
+    <p>If an element is taller than the element containing it, and it is floated, it will "overflow" outside of its container:</p>
+
+    <p>In this example, the image is taller than the element containing it, and it is floated, so it overflows outside of its container:</p>
+
+    <div class="greenBorder">
+        <img class="imgRight" src="pineapple.jpg" alt="Pineapple" width="170" height="170"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+    </div>
+
+    <p style="clear:right">Add a clearfix class with overflow: auto; to the containing element, to fix this problem:</p>
+
+    <div class="clearfix greenBorder">
+        <img class="imgRight" src="pineapple.jpg" alt="Pineapple" width="170" height="170"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+    </div>
+
+    <h2>Grid of Boxes / Equal Width Boxes</h2>
+
+    <div class="clearfix" style="margin:20px;">
+        <div class="box" style="background-color:#bbb">
+            <p>Box 1</p>
+        </div>
+        <div class="box" style="background-color:#ccc">
+            <p>Box 2</p>
+        </div>
+
+        <div class="box" style="background-color:#ddd">
+            <p>Box 3</p>
+        </div>
+
+    </div>
+
+    <div class="infoBox">
+        <p style="font-weight: bold">What is box-sizing?</p>
+
+        <p>You can easily create three floating boxes side by side. However, when you add something that enlarges the width of each box (e.g. padding or borders), the box will break. The <span class="method">box-sizing</span> property allows us to include
+            the padding and border in the box's total width (and height), making sure that the padding stays inside of the box and that it does not break.</p>
+    </div>
+
+    <h2>Equal Height Boxes</h2>
+
+    <p>In the previous example, you learned how to float boxes side by side with an equal width. However, it is not easy to create floating boxes with equal heights. A quick fix however, is to set a fixed height, however this is not very flexible.</p>
+
+    <p>Hence they created CSS3 Flexbox</p>
+
+    <div class="infoBox">
+        <p>The only problem with Flexbox is that it does not work in Internet Explorer 10 or earlier versions. </p>
+    </div>
+</body>
+
+</html>
