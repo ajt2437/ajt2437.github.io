@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Page 14</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <!-- <script src="main.js"></script> -->
@@ -12,6 +12,154 @@
 
 <body>
 
+    <h1>CSS Grid</h1>
+
+    <p>Turn any HTML element into a grid container by setting its display property to grid. This gives you the ability to use all the other properties associated with CSS Grid.</p>
+
+    <p><b>Note</b><br>In CSS Grid, the parent element is referred to as the container and its children are called items.</p>
+
+    <h2>Add Columns with grid-template-columns</h2>
+
+    <p>The number of parameters given to the <span class="method">grid-template-columns</span> property indicates the number of columns in the grid, and the value of each parameter indicates the width of each column.</p>
+
+    <p>Example</p>
+
+    <pre class="exampleBox">
+        .container {
+            display: grid;
+            grid-template-columns: 50px 50px;
+        }
+    </pre>
+
+    <p>This will give your grid two columns that are 50px wide each.</p>
+
+    <h2>Add Rows with grid-template-rows</h2>
+
+    <p>To adjust the rows manually, use the <span class="method">grid-template-rows</span> property in the same way you used <span class="method">grid-template-columns</span></p>
+
+    <h2>Use CSS Grid units to Change the Size of Columns and Rows</h2>
+
+    <p>You can use absolute and relative units like px and em in CSS Grid to define the size of rows and columns. You can use these as well:</p>
+
+    <p><span class="method">fr</span>: sets the column or row to a fraction of the available space,</p>
+
+    <p><span class="method">auto</span>: sets the column or row to the width or height of its content automatically,</p>
+
+    <p><span class="method">%</span>: adjusts the column or row to the percent width of its container.</p>
+
+    <pre class="exampleBox">
+        grid-template-columns: auto 50px 10% 2fr 1fr;
+    </pre>
+
+    <p>This snippet creates five columns. The first column is as wide as its content, the second column is 50px, the third column is 10% of its container, and for the last two columns; the remaining space is divided into three sections, two are allocated
+        for the fourth column, and one for the fifth.</p>
+
+    <h2>Create a Column Gap Using grid-column-gap</h2>
+
+    <pre class="exampleBox">
+        grid-column-gap: 10px;
+    </pre>
+
+    <h2>Create a Row Gap using grid-row-gap</h2>
+
+    <p>You can add a gap in between the rows of a grid using grid-row-gap in the same way that you added a gap in between columns.</p>
+
+    <h2>Add Gaps Faster with grid-gap</h2>
+
+    <p><span class="method">grid-gap</span> is a shorthand property for <span class="method">grid-row-gap</span> and <span class="method">grid-column-gap</span> that's more convenient to use. If <span class="method">grid-gap</span> has one value, it will
+        create a gap between all rows and columns. However, if there are two values, it will use the first one to set the gap between the rows and the second value for the columns.</p>
+
+    <h2>Use grid-column to Control Spacing</h2>
+
+    <p>Up to this point, all the properties that have been discussed are for grid containers. The <span class="method">grid-column</span> property is the first one for use on the grid items themselves.</p>
+
+    <p>The hypothetical horizontal and vertical lines that create the grid are referred to as <i>lines</i>. These lines are numbered starting with 1 at the top left corner of the grid and move right for columns and down for rows, counting upward.</p>
+
+    <p>To control the amount of columns an item will consume, you can use the grid-column property in conjunction with the line numbers you want the item to start and stop at.</p>
+
+    <p>Example</p>
+
+    <pre class="exampleBox">
+        grid-column: 1 / 3;
+    </pre>
+
+    <p>This will make the item start at the first vertical line of the grid on the left and span to the 3rd line of the grid, consuming two columns.</p>
+
+    <h2>Use grid-row to Control Spacing</h2>
+
+    <p>Of course, you can make items consume multiple rows just like you can with columns. You define the horizontal lines you want an item to start and stop at using the <span class="method">grid-row</span> property on a grid item.</p>
+
+    <h2>Align an Item Horizontally using justify-self</h2>
+
+    <p>You can align the content's position within its cell horizontally using the <span class="method">justify-self</span> property on a grid item. By default, this property has a value of <span class="method">stretch</span>, which will make the content
+        fill the whole width of the cell. </p>
+
+    <p>Other values are:</p>
+
+    <ul>
+        <li><span class="method">start</span>: aligns the content at the left of the cell</li>
+        <li><span class="method">center</span>: aligns the content in the center of the cell</li>
+        <li><span class="method">end</span>: aligns the content at the right of the cell</li>
+    </ul>
+
+    <h2>Align an Item Vertically using align-self</h2>
+
+    <p>This property accepts all of the same values as <span class="method">justify-self</span></p>
+
+    <h2>Align All Items Horizontally using justify-items</h2>
+
+    <p>Sometimes you want all the items in your CSS Grid to share the same alignment. ou can use the previously learned properties and align them individually, or you can align them all at once horizontally by using <span class="method">justify-items</span>        on your grid container. </p>
+
+    <h2>Align All Items Vertically using align-items</h2>
+
+    <p>Using the <span class="method">align-items</span> property on a grid container will set the vertical alignment for all the items in our grid.</p>
+
+    <h2>Divide the Grid Into an Area Template</h2>
+
+    <p>You can group cells of your grid together into an <i>area</i> and give the area a custom name.</p>
+
+    <pre class="exampleBox">
+        grid-template-areas:
+            "header header header"
+            "advert content content"
+            "footer footer footer";
+    </pre>
+
+    <p>The code above merges the top three cells together into an area named <span class="method">header</span>, the bottom three cells into a <span class="method">footer</span> area, and it makes two areas in the middle row; <span class="method">advert</span>        and <span class="method">content</span>.</p>
+
+    <p><b>Note</b><br> Every word in the code represents a cell and every pair of quotation marks represent a r</p>
+
+    <p>In addition to custom labels, you can use a period (.) to designate an empty cell in the grid.</p>
+
+    <h2>Place Items in Grid Areas Using the grid-area Property</h2>
+
+    <p>After creating an areas template for your grid container, as shown in the previous challenge, you can place an item in your custom area by referencing the name you gave it.</p>
+
+    <pre class="exampleBox">
+        .item1 {
+            grid-area: header;
+        }
+    </pre>
+
+    <p>This lets the grid know that you want the <span class="method">item1</span> class to go in the area named <span class="method">header</span>. In this case, the item will use the entire top row because that whole row is named as the header area.</p>
+
+    <h2>Use grid-area Without Creating an Areas Template</h2>
+
+    <p>If your grid doesn't have an areas template to reference, you can create an area on the fly for an item to be placed like this:</p>
+
+    <pre class="exampleBox">
+        .item1 {
+            grid-area: 1/1/2/4;;
+        }
+    </pre>
+
+    <p>The numbers in the example above represent these values:</p>
+
+    <pre class="exampleBox">
+        horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;
+    </pre>
+
+    <p>So the item in the example will consume the rows between lines 1 and 2, and the columns between lines 1 and 4.</p>
 </body>
 
 </html>
