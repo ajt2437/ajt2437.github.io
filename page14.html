@@ -8,6 +8,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <!-- <script src="main.js"></script> -->
+    <style>
+        .item1 {
+            background: LightSkyBlue;
+        }
+        
+        .item2 {
+            background: LightSalmon;
+        }
+        
+        .item3 {
+            background: PaleTurquoise;
+        }
+        
+        .item4 {
+            background: LightPink;
+        }
+        
+        .item5 {
+            background: PaleGreen;
+        }
+        
+        .grid1 {
+            font-size: 40px;
+            min-height: 100px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+        
+        .grid2 {
+            font-size: 40px;
+            min-height: 100px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -160,6 +203,81 @@
     </pre>
 
     <p>So the item in the example will consume the rows between lines 1 and 2, and the columns between lines 1 and 4.</p>
+
+    <h2>Reduce Repetition Using the repeat Function</h2>
+
+    <p>Lets say you want a grid with 100 rows of the same height. It isn't very practical to insert 100 values individually.</p>
+
+    <p>Fortunately, there's a better way - by using the <span class="method">repeat</span> function to specify the number of times you want your column or row to be repeated, followed by a comma and the value you want to repeat.</p>
+
+    <pre class="exampleBox">
+        grid-template-rows: repeat(100, 50px);
+    </pre>
+
+    <p>This example would create the 100 row grid, each row at 50px tall.</p>
+
+    <p>You can also repeat multiple values with the repeat function, and insert the function amongst other values when defining a grid structure.</p>
+
+    <pre class="exampleBox">
+        grid-template-rows: repeat(2, 2fr 25px) 20px;
+    </pre>
+
+    <p>This translates to:</p>
+
+    <pre class="exampleBox">
+        grid-template-rows: 2fr 25px 2fr 25px 20px;
+    </pre>
+
+    <p><b>Note</b><br> <span class="method">1fr 50px</span> is repeated twice followed by 20px.</p>
+
+    <h2>Limit Item Size Using the minmax Function</h2>
+
+    <p>There's another built-in function to use with grid-template-columns and grid-template-rows called minmax. It's used to limit the size of items when the grid container changes size.</p>
+
+    <pre class="exampleBox">
+        grid-template-columns: 100px minmax(25px, 250px);
+    </pre>
+
+    <p>In the code above, <span class="method">grid-template-columns</span> is set to create two columns; the first is 100px wide, and the second has the minimum width of 50px and the maximum width of 200px.</p>
+
+    <h2>Create Flexible Layouts Using auto-fill</h2>
+
+    <p>The repeat function comes with an option called auto-fill. This allows you to automatically insert as many rows or columns of your desired size as possible depending on the size of the container. You can create flexible layouts when combining
+        <span class="method">auto-fill</span> with <span class="method">minmax</span>.</p>
+
+    <pre class="exampleBox">
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    </pre>
+
+    <p>When the container changes size, this setup keeps inserting 60px columns and stretching them until it can insert another one.</p>
+
+    <p><b>Note</b><br> If your container can't fit all your items on one row, it will move them down to a new one.</p>
+
+    <h2>Create Flexible Layouts Using auto-fit</h2>
+
+    <p>auto-fit works almost identically to auto-fill. The only difference is that when the container's size exceeds the size of all the items combined, auto-fill keeps inserting empty rows or columns and pushes your items to the side, while auto-fit collapses
+        those empty rows or columns and stretches your items to fit the size of the container.</p>
+
+    <p><b>Note</b><br> If your container can't fit all your items on one row, it will move them down to a new one.</p>
+
+    <div class="grid1">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+    </div>
+
+    <div class="grid2">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+    </div>
+
+
+    <a href="page15.html">Page 15</a>
 </body>
 
 </html>

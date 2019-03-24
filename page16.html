@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page 16</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <!-- <script src="main.js"></script> -->
+</head>
+
+<body>
+    <!-- <button onm -->
+    <button id="button" onmouseover="hoverCount()" onmouseout="hoverOut()">Hover over me</button>
+    <button onclick="showHideHeatMap()">Show heat map</button>
+
+    <script>
+        var buttonHoverCount = 0;
+        var buttonClickCount = 0;
+        var buttonElement = document.getElementById("button");
+        var showingHeatMap = false;
+
+        function hoverCount() {
+            buttonHoverCount++;
+            buttonElement.innerHTML = "Hover: " + buttonHoverCount;
+        }
+
+        function hoverOut() {
+            buttonElement.innerHTML = "Hover over me, click me!";
+        }
+
+        function clickDownCount() {
+            buttonClickCount++;
+            buttonElement.innerHTML = "Clicks: " + buttonClickCount;
+            // applyHeatMap();
+        }
+
+        function showHideHeatMap() {
+            console.log("showing heat map: " + showingHeatMap);
+            if (!showingHeatMap) {
+                applyHeatMap()
+            } else {
+                buttonElement.style.backgroundColor = null;
+            }
+
+            showingHeatMap = !showingHeatMap;
+        }
+
+        function applyHeatMap() {
+
+            //3-color scale
+            //case 1: Minimum
+
+            if (buttonClickCount < 5) {
+                console.log("less than 5");
+                buttonElement.style.backgroundColor = "rgb(255, 0, 0)";
+            } else if (buttonClickCount <= 15) {
+                console.log("less than or equal 15");
+                var greenScale = Math.round((buttonClickCount / 15) * 255);
+                console.log("greenScale: " + greenScale);
+
+                //create hex number
+                var rgbaCode = "rgb(255, " + greenScale + ", 0)";
+
+                //apply color
+                buttonElement.style.backgroundColor = rgbaCode;
+            } else {
+                console.log("greater than 15");
+                var redScale = (255 - buttonClickCount * 5);
+                redScale = (redScale > 0) ? redScale : 0;
+                console.log("redScale: " + redScale);
+
+                var rgbaCode = "rgb(" + redScale + ", 255, 0)";
+
+                buttonElement.style.backgroundColor = rgbaCode;
+            }
+
+
+
+
+        }
+
+        // applyHeatMap();
+        document.getElementById("button").addEventListener("click", clickDownCount);
+    </script>
+    <a href="page17.html">Page 17</a>
+</body>
+
+</html>

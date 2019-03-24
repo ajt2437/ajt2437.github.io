@@ -1,87 +1,80 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 
 <head>
-    <meta charset="utf-8" />
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <title>Outdoor Adventures</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Freddie Mercury</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <!-- <script src="main.js"></script> -->
-    <!-- Links and other meta information here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="tribute.css">
+    <script src="tribute.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Germania One', cursive;
+        }
+        
+        img {
+            width: 75vw;
+            display: block;
+            height: auto;
+            margin: auto;
+        }
+        
+        #main {
+            background: gray;
+        }
+        
+        #img-div {
+            padding: 15px;
+            background: white;
+        }
+        
+        #tribute-info {
+            padding: 15px;
+            background: white;
+        }
+    </style>
 </head>
 
-<body style="background-color:powderblue">
-    <h1 id="headerTitle" style="color:coral;font-family:courier;font-size: 300%;text-align: center">Outdoor Adventures</h1>
-    <img src="Iceland-Photo-Workshop-Banner.jpg" alt="Main banner" style="width:100%">
-    <h2 style="color:blueviolet">Home</h2>
-    <!-- <h2>State search</h2>
-    <h2>Near me</h2>
-    <h2>About</h2> -->
-    <p title="I'm a tooltip" class="center">Welcome to Outdoor Adventures! Where you can plan your next adventure.</p>
+<body>
+    <div id="main">
+        <h1 id="title" class="centerText">Freddie Mercury</h1>
 
-    <h2>What we offer:</h2>
-    <ol>
-        <li>Search for new places</li>
-        <ul>
-            <li>By location</li>
-            <li>By proximity</li>
-        </ul>
-        <li>Save your favorite locations</li>
-        <li>Get important news about: </li>
-        <ul>
-            <li>Weather</li>
-            <li>Wildlife</li>
-            <li>Fauna</li>
-        </ul>
-        <li>Plan your food and calories</li>
-    </ol>
+        <div id="img-div" class="center centerText">
+            <img id="image" src="big-freddie.jpeg" alt="Portrait Picture of Freddie Mercury">
+            <div id="img-caption">Freedie Mercury (09/05/1946 - 11/24/1991)</div>
+        </div>
 
-    <p title='John "ShotGun" Nelson'>Hope you have a nice trip!</p>
+        <div id="tribute-info" class="center">
+            <h2>About his amazing life:</h2>
+            <ul>
+                <li>Born as Farrokh Bulsara</li>
+                <li>British</li>
+                <ul>
+                    <li>Co-founder of the rock band Queen</li>
+                    <li>Lead vocalist</li>
+                    <li>Singer</li>
+                    <li>Songwriter</li>
+                    <li>Record producer</li>
+                </ul>
+            </ul>
+            <h3>Record songs</h3>
+            <ul>
+                <li>Bohemian Rhapsody</li>
+                <li>Killer Queen</li>
+                <li>Somebody to Love</li>
+                <li>Don't Stop Me Now</li>
+                <li>Crazy Little Thing Called Love</li>
+                <li>We Are the Champions</li>
+            </ul>
+            <blockquote cite="https://www.azquotes.com/quote/1462216">
+                You can be anything you want to be, just turn yourself into anything you think that you could ever be.
+            </blockquote>
 
-    <p>For more information about my other work: <a href="https://abe24torres.wordpress.com/" target="_blank">Click here!</a></p>
-
-    <h1>Most important header with top and bottom margin</h1>
-    <h2>Search engines use the headings to index the structure and content of your web pages.</h2>
-    <h3 style="font-size:60px">2nd least important wtih font size 60px</h3>
-
-    <hr>
-    <!-- Thematic break -->
-
-    <h4>3rd least important</h4>
-    <h5>4th least important</h5>
-    <h6>5th least important</h6>
-
-    <p> Just a paragraph with some extra top and bottom margin</p>
-
-    <p>This paragraph contains a lot of spaces in the source code, but the browser ignores it. The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
-    </p>
-
-    <pre>
-            
-                    My Bonnie lies over the ocean.
-                  
-                    My Bonnie lies over the sea.
-                  
-                    My Bonnie lies over the ocean.
-                  
-                    Oh, bring back my Bonnie to me.
-                  
-    </pre>
-
-    <form action="">
-        <input type="text" placeholder="Say something nice" required> <br>
-        <label for="regards"><input id="regards" type="checkbox" name="signatory" required>With regards</label> <br>
-        <br><label>Do you like dogs or cats?</label> <br>
-        <label for="dogs"><input id="dogs" type="radio" name="dogs-cats">Dogs</label>
-        <label for="cats"><input id="cats" type="radio" name="dogs-cats">Cats</label>
-        <label for="both"><input id="both" type="radio" name="dogs-cats">Both</label> <br>
-
-        <button type="submit">Submit</button>
-    </form>
-
-    <a href="page1.html">Next page</a> <br> <br>
-    <a href="#headerTitle">Scroll To Top</a>
+            <a id="tribute_link" href="https://en.wikipedia.org/wiki/Talk:Freddie_Mercury#toc" target="_blank">To hear listen and learn more about this amazing person, click here</a>
+        </div>
+    </div>
 </body>
 
 </html>
