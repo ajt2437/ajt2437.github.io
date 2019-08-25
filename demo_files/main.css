@@ -1,0 +1,60 @@
+.method {
+    color: red;
+    font-size: 80%;
+}
+
+.note {
+    font-size: 120%;
+    color: red;
+}
+
+
+/* You can specify only specific HTML elements should be affected by a class
+Example, only <p> elements with class="center" will be center-aligned */
+
+p.center {
+    text-align: center;
+    color: red;
+}
+
+
+/* You can group selectors with a comma */
+
+table,
+th,
+tr {
+    border: 1px solid black;
+}
+
+
+/* Class name cannot start with a number! */
+
+
+/* Do not add space between the property value and the unit (such as margin-left:20 px;). The correct way is: margin-left: 20px; */
+
+
+/* Tip: An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly. */
+
+h1.multiple {
+    color: navy;
+}
+
+.infoBox {
+    background-color: rgba(255, 255, 0, 0.25);
+    border-left: 5px solid rgb(255, 255, 13);
+    padding: 17px;
+}
+
+pre.exampleBox {
+    background-color: white;
+    border-left: 5px solid rgba(0, 255, 0, 0.75);
+    padding: 17px;
+}
+
+li.inline {
+    display: inline;
+}
+
+.clearfix {
+    overflow: auto;
+}

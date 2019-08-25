@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Outdoor Adventures Landing Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        #header-img {
+            width: auto;
+            display: block;
+            max-height: 50px;
+        }
+        
+        #header {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: fixed;
+            top: 0;
+        }
+        
+        .navbar {
+            display: flex;
+        }
+        
+        .navbar a {
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            color: black;
+        }
+        
+        .navbar a:hover {
+            color: darkgray;
+        }
+        
+        @media screen and (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+            }
+            #header {
+                margin: auto;
+                flex-direction: column;
+            }
+        }
+        
+        .center {
+            margin: auto;
+            width: 100%;
+            text-align: center;
+        }
+        
+        #bodyContent {
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="logo">
+            <img id="header-img" src="logo1.jpg" alt="original outdoor adventure logo">
+        </div>
+        <nav id="nav-bar" class="navbar">
+            <a class="nav-link" href="#features">Features</a>
+            <a class="nav-link" href="#how-it-works">How It Works</a>
+            <a class="nav-link" href="#beta-testing">Be our first testers</a>
+        </nav>
+    </header>
+
+
+    <div id="bodyContent">
+        <section id="features">
+            <ul>
+                <li>Search new places and trails</li>
+                <li>Plan food for your groups' adventure</li>
+            </ul>
+        </section>
+        <section id="how-it-works">
+            <iframe id="video" src="https://www.youtube.com/embed/QlKOcyf915M?rel=0&controls=0&showinfo=0">
+        </iframe>
+        </section>
+        <section id="beta-testing">
+            <h2 class="center">There is an adventure waiting out there for you.</h2>
+            <form id="form" class="center" action="https://www.freecodecamp.com/email-submit">
+                <input id="email" type="email" placeholder="Enter your email address" required>
+                <input id="submit" type="submit" value="Get Started">
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey page</title>
+</head>
+
+<body>
+    <h1 id="title">Survey form</h1>
+
+    <p id="description">Short survey about traveling and hiking</p>
+
+    <form id="survey-form">
+        <label id="name-label" for="name">Name</label>
+        <input type="text" id="name" placeholder="Type your name:">
+        <label id="email-label" for="email">Email</label>
+        <input type="email" id="email" placeholder="example@example.com">
+        <label id="number-label" for="number">Number</label>
+        <input type="number" id="number" placeholder="Think of a number between 1-100" min="1" max="100">
+
+        <label id="dropdown-label" for="dropdown">How are you feeling?</label>
+        <select id="dropdown">
+            <option disabled="" value="">Select an option</option>
+            <option value="sad">Sad</option>
+            <option value="ok">OK!</option>
+            <option value="great">Great</option>
+            <option value="excellent">Excellent</option>
+        </select>
+
+        <label id="radiobutton-label" for="personality">
+            Which one do you identify the best?
+        </label>
+        <ul style="list-style: none">
+            <li>
+                <label for="introvert">
+                    <input id="introvert" type="radio" name="introver-extrovert">Introvert
+                </label>
+
+            </li>
+            <li>
+                <label for="extrovert">
+                        <input id="extrovert" type="radio" name="introver-extrover">Extrovert
+                    </label>
+            </li>
+        </ul>
+
+        <label id="checkbox-label" for="movie-genre">
+            What movie genres do you like? (Check all that apply):
+        </label>
+
+        <ul style="list-style: none">
+            <li>
+                <label for="horror">
+                    <input type="checkbox" id="horor" value="1">Horror
+                </label>
+            </li>
+            <li>
+                <label for="action">
+                    <input type="checkbox" id="action" value="2">Action
+                </label>
+            </li>
+            <li>
+                <label for="comedy">
+                    <input type="checkbox" id="comedy" value="3">Comedy
+                </label>
+            </li>
+            <li>
+                <label for="drama">
+                    <input type="checkbox" id="drama" value="4">Drama
+                </label>
+            </li>
+            <li>
+                <label for="other">
+                    <input type="checkbox" id="other" value="5">Other
+                </label>
+            </li>
+        </ul>
+
+        <label id="textarea-label" for="comment">Any other comments?</label>
+
+        <textarea style="height: 50px; width:50px;" placeholder="Enter your comment here...">
+
+        <button id="submit" type="submit">Submit</button>
+
+
+    </form>
+
+</body>
+
+</html>

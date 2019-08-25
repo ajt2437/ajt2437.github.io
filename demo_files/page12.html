@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page 12</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <!-- <script src="main.js"></script> -->
+
+    <style>
+        body {
+            background-color: black;
+            color: green;
+        }
+        
+        .pink-text {
+            color: pink !important;
+        }
+        
+        .blue-text {
+            color: blue;
+        }
+        
+        #orange-text {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color:white;" id="orange-text" class="blue-text pink-text">Hello World</h1>
+
+    <h2>Override Styles</h2>
+
+    <p>Any CSS class can override our <span class="method">body</span> element's CSS declaration</p>
+
+    <p>So what if we have multiple CSS classes listed in the HTML element. The order of the <span class="method">class</span> declarations in the <span class="method">&lt;style&gt;</span> section is whats important, not the order the classes are listed in
+        the HTML.</p>
+
+    <p>Subsequent CSS declarations in the <span class="method">&lt;style&gt;</span> override presequence CSS class declaration. In our example the second declaration will always take precedence over the first. Because <span class="method">.blue-text</span>        is declared second, it overrides the attributes of <span class="method">.pink-text</span></p>
+
+    <h2>Override Class Declarations by Styling ID Attributes</h2>
+
+    <p>The id attribute will always take precedence, over the CSS classes. In the our <span class="method">&lt;h1&gt;</span> header "Hello World" the id style took precedence over my two CSS classes.</p>
+
+    <h2>Override Class Declarations with Inline Styles</h2>
+
+    <p>Inline styles will override all the CSS declarations in your <span class="method">style</span> element</p>
+
+    <h2>Override All Other Styles by using Important</h2>
+
+    <p>In many situations, you will use CSS libraries. These may accidentally override your own CSS. So when you absolutely need to be sure that an element has specific CSS, you can use <span class="method">!important</span></p>
+
+    <p>You just need to add it to the element declaration, to override</p>
+
+    <p>An example of how to do this is:</p>
+
+    <p><span class="method">color: red !important!</span></p>
+
+    <p>In the our <span class="method">&lt;h1&gt;</span> header "Hello World" by adding the <span class="method">!important</span> keyword to the <span class="method">pink-text</span> class color declaration, we make sure 100% that the text will be pink.</p>
+
+    <h2>Use Abbreviated Hex Code</h2>
+
+    <p>For example, For example, red's hex code <span class="method">#FF0000</span> can be shortened to <span class="method">#F00</span>. This shortened form gives one digit for red, one digit for green, and one digit for blue.</p>
+    <h2>Use CSS Variables to change several elements at once</h2>
+
+    <p>To create a CSS Variable, you just need to give it a <span class="method">name</span> with <span class="method">two dashes(--)</span> in front of it and assign it a <span class="method">value</span> like this:</p>
+
+    <pre class="exampleBox">
+        <span class="method">--penguin-skin: gray</span>
+
+    </pre>
+
+    <p>You can reference the CSS variables like the following</p>
+
+    <pre class="exampleBox">
+        <span class="method">background: var(--penguin-skin);</span>
+    </pre>
+
+    <h2>Attach a Fallback value to a CSS Variable</h2>
+
+    <p>When using your variable as a CSS property value, you can attach a fallback value that your browser will revert to if the given variable is invalid.</p>
+
+    <p><b>Note:</b> This fallback is not used to increase browser compatibilty, and it will not work on IE browsers. Rather, it is used so that the browser has a color to display if it cannot find your variable.</p>
+
+    <pre class="exampleBox">
+        <span class="method">background: var(--penguin-skin, black);</span>
+    </pre>
+
+    <h2>Improve Compatibility with Browser Fallbacks</h2>
+
+    <p>When your browser parses the CSS of a webpage, it ignores any properties that it doesn't recognize or support. For example, if you use a CSS variable to assign a background color on a site, Internet Explorer will ignore the background color because
+        it does not support CSS variables.</p>
+
+    <p>This means that if you do want to provide a browser fallback, it's as easy as providing another more widely supported value immediately before your declaration. That way an older browser will have something to fall back on, while a newer browser will
+        just interpret whatever declaration comes later in the cascade.</p>
+
+    <p>Here is an example:</p>
+    <pre class="exampleBox">
+        .red-box {
+            <span class="method">background: red;</span>
+            <span class="method">background: var(--red-color);</span>
+        }
+    </pre>
+
+    <h2>Cascading CSS variables</h2>
+
+    <p>When you create a variable, it becomes available for you to use inside the element in which you create it. It also becomes available within any elements nested within it. This effect is known as <i>cascading</i>.</p>
+
+    <p>Because of cascading, CSS variables are often defined in the <i>:root</i> element.</p>
+
+    <p>You can think of the <span class="method">:root</span> element as a container for your entire HTML document, in the same way that an <span class="method">html</span> element is a container for the <span class="method">body</span> element.</p>
+    <p>By creating your variables in <span class="method">:root</span>, they will be available throughout the whole web page.</p>
+
+    <h2>Change a variable for a specific area</h2>
+
+    <p>When you create your variables in <span class="method">:root</span> they will set the value of that variable for the whole page.</p>
+
+    <p>You can then over-write these variables by setting them again within a specific element.</p>
+
+    <pre>
+        :root {
+            --penguin-skin: gray;
+            --penguin-belly: pink;
+            --penguin-beak: orange;
+        }
+
+        .penguin {
+            --penguin-belly: white;
+        
+        }
+    </pre>
+
+    <h2>Use a media query to change a variable</h2>
+
+    <p>For instance, when your screen is smaller or larger than your media query break point, you can change the value of a variable, and it will apply its style wherever it is used.</p>
+
+    <p>An example:</p>
+
+    <pre class="exampleBox">
+        :root {
+            --penguin-size: 300px;
+            --penguin-skin: gray;
+            --penguin-belly: white;
+            --penguin-beak: orange;
+        }
+
+        @media (max-width: 350px) {
+            :root {
+                --penguin-size: 200px;
+                --penguin-skin: black;
+            }
+        }
+    </pre>
+
+    <a href="page13.html">Page 13</a>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page 10</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <!-- <script src="main.js"></script> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+        a:link {
+            color: red;
+        }
+        
+        a:visited {
+            color: green;
+        }
+        
+        a:hover {
+            color: hotpink;
+        }
+        
+        a:active {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="top">CSS Fonts</h1>
+
+    <h2>Font Style</h2>
+
+    <p>The <span class="method">font-style</span> property is mostly used to specify italic text.</p>
+    <p>It has three values</p>
+    <ul>
+        <li>normal</li>
+        <li>italic</li>
+        <li>oblique - Oblique is very similar to italic, but less supported</li>
+    </ul>
+
+    <h2>Font size</h2>
+
+    <p>Font-size value can be an absolute or relative size</p>
+
+    <p>absolute size:</p>
+
+    <ul>
+        <li>Set text to a specified size.</li>
+        <li>Does not allow a user to change the text size in all browsers (bad for accessibility reasons)</li>
+        <li>Its useful when the physical size of the output is known</li>
+    </ul>
+
+    <p>Relative size:</p>
+
+    <ul>
+        <li>Set size relative to surrounding elements</li>
+        <li>Allow user to change text size in browsers</li>
+    </ul>
+
+    <p><span class="note">Note:</span> If you do not specify a font size, the default size for normal text, like paragraphs, is 16px (16px=1em).</p>
+
+    <h2>Font size with pixels</h2>
+
+    <p><b>Tip:</b> If you use pixels, you can still use the zoom tool to resize the entire page.</p>
+
+    <h2>Font size with Em</h2>
+
+    <pre>
+    To allow users to resize the text (in the browser menu), many developers use em instead of pixels.
+
+    The em size unit is recommended by the W3C.
+
+    1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px.
+
+    The size can be calculated from pixels to em using this formula: pixels/16=em
+    </pre>
+
+    <p><span class="note">Note:</span> Unfortunately, there is still a problem with older versions of IE. The text becomes larger than it should when made larger, and smaller than it should when made smaller.</p>
+
+    <h2>Use a combination of Percent and Em</h2>
+
+    <p>The solution that works in all browsers, is to set a default font-size in percent for the &lt;body&gt; element:</p>
+
+    <pre>
+        body {
+            font-size: 100%;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            font-size: 1.875em;
+        }
+        
+        p {
+            font-size: 0.875em;
+        }
+    </pre>
+
+    <p>Our code now works great! It shows the same text size in all browsers, and allows all browsers to zoom or resize the text!</p>
+
+    <h2>Font weight</h2>
+
+    <p>Example</p>
+
+    <pre>
+        p.normal {
+            font-weight: normal;
+        }
+          
+        p.thick {
+            font-weight: bold;
+        }
+    </pre>
+
+    <h2>Responsive Font Size</h2>
+
+    <p>The text size can be set with a <span class="method">vw</span> unit, which means the "viewport width". That way the text size will follow the size of the browser window:</p>
+
+    <h3>Example</h3>
+
+    <pre>
+        &lt;h1 style="font-size:10vw"&gt;Hello World&lt;/h1&gt;
+    </pre>
+
+    <p class="infoBox">Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.</p>
+
+    <h2>Font Variant</h2>
+
+    <p>The font-variant property specifies whether or not a text should be displayed in a small-caps font.</p>
+
+    <p>In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letters in the text.</p>
+
+    <h3>Example</h3>
+
+    <pre class="exampleBox">
+        p.normal {
+            font-variant: normal;
+        }
+          
+        p.small {
+            font-variant: small-caps;
+        }
+    </pre>
+
+    <h2>Font shorthand</h2>
+
+    <p>Set the <span class="method">font</span> element with the following values in specific order (not all values need to present)</p>
+
+    <ol>
+        <li>font-style</li>
+        <li>font-weight</li>
+        <li>font-size</li>
+        <li>font-family</li>
+    </ol>
+
+    <h1>CSS Icons</h1>
+
+    <h2>How to Add Icons</h2>
+
+    <p>The simplest way to add an icon to your HTML page, is with an icon library, such as Font Awesome.</p>
+
+    <p>Add the name of the specified icon class to any inline HTML element (like <span class="method">&lt;i&gt;</span>, etc.).</p>
+
+    <i class="fas fa-cloud"></i>
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-car"></i>
+    <i class="fas fa-file"></i>
+    <i class="fas fa-bars"></i>
+
+    <h1>CSS links</h1>
+
+    <h2>Link states</h2>
+
+    <p>The four link states are:</p>
+
+    <ul>
+        <li><span class="method">a:link</span> - a normal, unvisited link</li>
+        <li><span class="method">a:visited</span> - a link the user has visited</li>
+        <li><span class="method">a:hover</span> - a link when the user mouses over it</li>
+        <li><span class="method">a:active</span> - a link the moment it is clicked</li>
+    </ul>
+
+    <a href="page10.html#top">Scroll To Top</a>
+
+    <p>When setting the style for several link states, there are some order rules:</p>
+
+    <ul>
+        <li>a:hover MUST come after a:link and a:visited</li>
+        <li>a:active MUST come after a:hover</li>
+    </ul>
+
+    <h2>Text Decoration</h2>
+
+    <p>The <span class="method">text-decoration</span> property is mostly used to remove underlines from links:</p>
+
+    <h3>Example</h3>
+
+    <pre class="exampleBox">
+    a:link {
+        text-decoration: none;
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    a:active {
+        text-decoration: underline;
+    }
+    </pre>
+
+    <h2>Cursor</h2>
+
+    <p>You can set the cursor by setting the <span class="method">cursor</span> property</p>
+
+
+    <h1>CSS lists</h1>
+
+    <h2>An Image as The List Item Marker</h2>
+
+    <p>Specify the <span class:method>list-style-image</span> property</p>
+
+    <h2>Position The List Item Markers</h2>
+
+    <p>The <span class="method">list-style-position</span> property specifies the position of the list-item markers (bullet points).</p>
+
+    <p>There are two possible values</p>
+
+    <ul style="list-style-position:outside;">
+        <li>"list-style-position: outside;" means that the bullet points will be outside the list item. The start of each line of a list item will be aligned vertically. This is default:</li>
+    </ul>
+    <ul style="list-style-position:inside;">
+        <li>"list-style-position: inside;" means that the bullet points will be inside the list item. As it is part of the list item, it will be part of the text and push the text at the start:</li>
+    </ul>
+
+    <h2>List - Shorthand property</h2>
+
+    <p>When using the shorthand property <span class="method">list-style</span>, the order of the property values are:</p>
+
+    <ul>
+        <li><span class="method">list-style-type</span> (if a list-style-image is specified, the value of this property will be displayed if the image for some reason cannot be displayed)</li>
+        <li><span class="method">list-style-position</span> (specifies whether the list-item markers should appear inside or outside the content flow)</li>
+        <li><span class="method">list-style-image</span> (specifies an image as the list item marker)</li>
+    </ul>
+
+    <p>If one of the property values are missing, the default value of the missing property will be inserted</p>
+
+    <h3>Example</h3>
+
+    <pre class="exampleBox">
+    ul {
+        list-style: square inside url("sqpurple.gif");
+    }
+    </pre>
+
+    <h1>CSS Table</h1>
+
+    <h2>Hoverable Table</h2>
+
+    <p>Use the <span class="method">:hover</span> selector on &lt;tr&gt; to highlight table rows on mouse over:</p>
+
+    <h2>Striped Tables</h2>
+
+    <p>For zebra-striped tables, use the <span class="method">nth-child()</span> selector and add a background-color to all even (or odd) table rows:</p>
+
+    <h2>Responsive Table</h2>
+
+    <p>Add a container element (like &lt;div&gt;) with <span class="method">overflow-x:auto</span> around the &lt;table&gt; element to make it responsive:</p>
+
+    <h3>Example</h3>
+
+    <pre class="exampleBox">
+    &lt;div style="overflow-x:auto;"&gt;
+
+            &lt;table&gt;
+            ... table content ...
+            &lt;/table&gt;
+            
+    &lt;/div&gt; 
+    </pre>
+
+    <h1>CSS Layout - The display Property</h1>
+
+    <p>The <span class="method">display</span> property is the most importan CSS property for controlling layout.</p>
+
+    <p>Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is <span class="method">block</span> or <span class="method">inline.</span></p>
+
+    <h2>Display: none;</h2>
+
+    <p><span class="method">display: none;</span> is commonly used with JavaScript to hide and show elements without deleting and recreating them.</p>
+
+    <p>The &lt;script&gt; element uses <span class="method">display: none;</span> as default. </p>
+
+    <h2>Override The Default Display Value</h2>
+
+    <p>A common example is making inline <span class="method">&lt;li&gt;</span> elements for horizontal menus:</p>
+
+    <ul style="list-style-type:none;">
+        <li class="inline">Home</li>
+        <li class="inline">About</li>
+        <li class="inline">Contact Us</li>
+    </ul>
+
+    <p class="infoBox"><b>Note:</b> Setting the display property of an element only changes <b>how the element is displayed</b>, NOT what kind of element it is. So, an inline element with <span class="method"> display:block;</span> is not allowed to have other block elements
+        inside it.</p>
+
+    <h2>Hide an Element - display:none or visibility:hidden?</h2>
+
+    <p><span class="method">display:none;</span> will hide it and display the [age as if the element is not there.</p>
+
+    <p><span class="method">visibility:hidden;</span> will hide it but will still take up space up the same space before.</p>
+
+    <a href="page11.html">Page 11</a>
+</body>
+
+</html>

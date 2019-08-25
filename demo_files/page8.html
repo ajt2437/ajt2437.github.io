@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page 8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <style>
+        h1.multiple {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="multiple">Multiple Style Sheets</h1>
+
+    <p>If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will used.</p>
+
+    <p>Example: If the internal style is defined after the link to the external style, the &lt;h1&gt; elements will be "orange"</p>
+
+    <h1>Cascading Order</h1>
+
+    <p>When multiple styles have been specified, the following rules apply, where number one has the highest priority:</p>
+
+    <ol type="1">
+        <li>Inline style (inside an HTML element)</li>
+        <li>External and internal style sheets (in the head section, the last read style sheet will have the highest priority)</li>
+        <li>Browser default</li>
+    </ol>
+
+    <h1>CSS Backgrounds</h1>
+
+    <p>CSS background properties</p>
+    <ul>
+        <li>background-color</li>
+        <li>background-image</li>
+        <li>background-repeat</li>
+        <li>background-attachment</li>
+        <li>background-position</li>
+    </ul>
+
+    <p><span class="note">Note:</span> When using a background image, use an image that does not disturb the text.</p>
+
+    <p>To repeat an image only horizontally use <span class="method">background-repeat:repeat-x;</span>, to repeat an image vertically, set <span class="method">background-repeat:repeat-y;</span></p>
+
+    <pre>Example:
+    body {
+        background-image: url("gradient_bg.png");
+        background-repeat: repeat-x;
+    }
+    </pre>
+
+    <p>To avoid repeating images, set <span class="method">background-repeat: no-repeat;</span></p>
+
+    <p>The position of the image is specified by the <span class="method">background-position</span> property:</p>
+
+    <pre>Example:
+            body {
+                background-image: url("gradient_bg.png");
+                background-repeat: no-repeat;
+                background-position: right top;
+            }
+    </pre>
+
+    <p>To specify that the background image should be fixed (will no scroll with the rest of the page), set the <span class="method">background-attachment: fixed</span> property</p>
+
+    <h1>Background - Shorthand property</h1>
+
+    <p>You can specify all the background properties in one single property.</p>
+
+    <p>When using the Shorthand property the order order of the property values is:</p>
+
+    <ul>
+        <li>background-color</li>
+        <li>background-image</li>
+        <li>background-repeat</li>
+        <li>background-attachment</li>
+        <li>background-position</li>
+    </ul>
+
+    <p>It does not matter if one of the property values is missing, as long as the other ones are in this order.</p>
+
+    <pre>Example:
+    body {
+        background-image: #ffffff url("gradient_bg.png") no-repeat right top;
+    }
+</pre>
+
+    <a href="page9.html">Page 9</a>
+</body>
+
+</html>
